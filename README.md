@@ -29,14 +29,16 @@
 ### Association
 - has_many :groups
 - has_many :messages
+- has_many :members
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|text|null: false, add_index|
+|name|text|null: false, add_index|
 ### Assotiation
 - has_many :users
 - has_many :messages
+- has_many :members
 
 ## messagesテーブル
 |Column|Type|Options|
