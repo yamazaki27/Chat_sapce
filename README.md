@@ -23,8 +23,8 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add_index|
-|email|text|null: false, add_index|
+|name|string|null: false, add_index, unique|
+|email|text|null: false, add_index, unique|
 |password|text|null: false|
 ### Association
 - has_many :groups
