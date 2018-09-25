@@ -1,14 +1,5 @@
 # README
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-
-* Database creation
-
 ## membersテーブル
 
 |Column|Type|Options|
@@ -23,22 +14,20 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add_index, unique|
-|email|text|null: false, add_index, unique|
+|name|string|null: false, add_index, unique: true|
+|email|text|null: false, add_index, unique: true|
 |password|text|null: false|
 ### Association
-- has_many :groups
+- has_many :groups, through: :members
 - has_many :messages
-- has_many :members
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false, add_index|
 ### Assotiation
-- has_many :users
+- has_many :users, thorough: :members
 - has_many :messages
-- has_many :members
 
 ## messagesテーブル
 |Column|Type|Options|
@@ -50,14 +39,3 @@
 ### Association
 - belongs_to :user
 - belongs_to :group
-
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
