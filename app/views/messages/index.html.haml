@@ -1,0 +1,52 @@
+.flash チャットグループが作成されました。
+
+.chat-side
+  .chat-side__user
+    .chat-side__user_content
+      .chat-side__user-name ヤマザキ
+      .chat-side__user-icons
+        %a{ :href => '#', :class => '.chat-side__user--new-group' }
+          %i.fa.fa-edit.edit
+        %a{ :href => '#', :class => '.chat-side__user--edit-user' }
+          %i.fa.fa-cog.cog
+  .chat-side__groups
+    .chat-side__groups-list
+      %a{ :href => "" }
+        .chat-side__group
+          .chat-side__group-name test
+          .chat-side__group-message まだメッセージはありません。
+    .chat-side__groups-list
+      %a{ :href => "" }
+        .chat-side__group
+          .chat-side__group-name test
+          .chat-side__group-message まだメッセージはありません。
+
+.chat-main
+  .chat-main__header
+    .chat-main__header--group.clearfix
+      .chat-main__header--group-name Sampleグループ
+      %a.chat-main__header-edit-btn{ :href => "#" } Edit
+    .chat-main__header-members
+      MEMBER:
+      %i ヤマザキ
+
+  .chat-main__body
+    .chat-main__body--messages-list
+      .chat-main__message.clearfix
+        .chat-main__message-name 山崎陽祐
+        .chat-main__message-time 2018/10/1 12:22:03
+        .chat-main__message-body なるほど
+      .chat-main__message.clearfix
+        .chat-main__message-name maickel
+        .chat-main__message-time 2018/10/1 11:22:03
+        .chat-main__message-body へぇー
+
+
+  .chat-main__footer
+    .chat-main__footer-form
+      .chat-main__footer-body
+        %form#new_message.chat-main__footer-form{ :action => "", :method => "post" }
+          %input#message_body{ :name => "message", :placeholder => "type a message", :type => "text"}
+        %i.icon_image.fa.fa-image
+        %input.submit{ :type => "submit", :name => "commit", :value => "Send", :style => "height:50px;"}
+
