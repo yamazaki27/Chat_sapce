@@ -49,11 +49,6 @@
       .chat-main__footer-body
         %form#new_message.chat-main__footer-form{ :action => "", :method => "post" }
           %input#message_body{ :name => "message", :placeholder => "type a message", :type => "text"}
-        %label.upload-label{for: "upload-icon" id: "icon-label"}
-          %i.fa.fa-image
-           = f.file_field :image, id: "upload-icon"
-        / %form{ :acrion => "URI", :enctype => "multipart/form-data" }
-        /   %input{ :type => "file", :value => "&#xf03e", :class => "fas"}
-          / %i.icon_image.fa.fa-image
+            %i.fa.fa-image
         %input.submit{ :type => "submit", :name => "commit", :value => "Send", :style => "height:50px;"}
 
