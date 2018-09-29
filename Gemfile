@@ -59,3 +59,7 @@ gem 'erb2haml'
 gem 'font-awesome-rails'
 
 gem 'font-awesome-sass'
+
+group :development, :test, :production do
+  gem 'devise'
+end

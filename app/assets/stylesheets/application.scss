@@ -1,14 +1,12 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "config/reset";
-@import "config/variable";
-@import "_mixin";
+@import "config/colors";
+@import "mixins/mixin";
+@import "modules/user";
+@import "modules/flash";
 
-.flash {
-  background-color: #38AEF0;
-  text-align: center;
-  color: $white
-}
+
 
 .chat-side {
   width: 300px;

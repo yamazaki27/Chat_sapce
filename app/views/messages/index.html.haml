@@ -1,9 +1,9 @@
-.flash チャットグループが作成されました
 
 .chat-side
   .chat-side__user
     .chat-side__user_content
-      .chat-side__user-name ヤマザキ
+      .chat-side__user-name
+        = current_user.name
       .chat-side__user-icons
         %a{ :href => '#', :class => '.chat-side__user--new-group' }
           %i.fa.fa-edit.edit
