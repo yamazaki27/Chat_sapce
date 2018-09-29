@@ -4,10 +4,6 @@
 @import "config/variable";
 @import "_mixin";
 
-/*
- *= require font-awesome
- */
-
 .flash {
   background-color: #38AEF0;
   text-align: center;
@@ -36,7 +32,7 @@
   position: relative;
   display: inline-block;
   height: 75px;
-  line-height: 120px;
+  line-height: 80px;
   padding-left: 40px
 }
 .chat-side__user-icons {
@@ -44,13 +40,13 @@
   position: relative;
   .fa.fa-edit.edit{
     position: absolute;
-    right: 40px;
-    bottom: 45px;
+    right: 41px;
+    bottom: 35px;
   }
   .fa.fa-cog.cog{
     position: absolute;
-    right: 20px;
-    bottom: 45px;
+    right: 21px;
+    bottom: 35px;
   }
 }
 .chat-side__user--new-group {
@@ -184,8 +180,7 @@
       }
     }
 }
-
-.fa.fa-image{
+i.fa.fa-image{
   z-index: 3;
   position: absolute;
   right: 190px;
