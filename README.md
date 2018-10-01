@@ -3,8 +3,8 @@
 ## membersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -25,7 +25,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false, add_index|
+|name|string|null: false, add_index|
 
 ### Assotiation
 - has_many :members
@@ -37,8 +37,8 @@
 |------|----|-------|
 |body|text|
 |image|text|
-|user_id|integer|foreign_key: true|
-|group_id|integer|foreign_key: true|
+|user_id|references|foreign_key: true|
+|group_id|references|foreign_key: true|
 
 ### Association
 - belongs_to :user
