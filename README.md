@@ -35,8 +35,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|
-|image|text|
+|text|string|
+|image|string|
 |user_id|references|foreign_key: true|
 |group_id|references|foreign_key: true|
 

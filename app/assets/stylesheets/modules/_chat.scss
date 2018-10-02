@@ -20,7 +20,7 @@
         margin: 35px 0 15px;
         padding-left: 40px;
       }
-      a.chat-main__header-edit-btn {
+      .chat-main__header-edit-btn {
         float: right;
         color: skyblue;
         font-weight: bold;
@@ -36,6 +36,7 @@
       padding-left: 40px;
     }
   }
+
 
   .chat-main__body {
     height: calc(100vh - 15% - 90px);
@@ -65,44 +66,43 @@
       margin-bottom: 40px;
     }
 
+
     &__footer {
       height: 90px;
       background-color: skyblue;
-      .chat-main__footer-body {
+      .form{
+        width: 100%;
+        height: 90px;
         position: relative;
-        height: 70px;
-        clear: both;
-        padding-top: 18px;
-        padding-bottom: 0px;
-        form.chat-main__footer-form{
+        .form__message {
           float: left;
           width: 80%;
-          padding-left: 40px;
-          z-index: 1;
-          input#message_body {
-            width: 100%;
-            height: 50px;
-            font-size: 16px;
-            color: #434A54;
-            padding-left: 10px;
-            font-family: fontawesome;
+          height: 50px;
+          margin: 20px 10px 20px 40px;
+          padding-left: 10px;
+          font-size: 16px;
+          color: #434A54;
+        }
+        .form__mask{
+          float: left;
+          position: absolute;
+          top: 35px;
+          left: 920px;
+          .hidden {
+            display: none;
           }
         }
-        input.submit {
+        .form__submit {
           float: right;
           margin-right: 40px;
+          margin-top:20px;
           height: 50px;
-          width: 100px;
-          background-color: #38AEF0;
-          color: $white;
+          width: 90px;
+          background-color:#38AEF0;
           border: none;
+          color: $white;
         }
       }
     }
 }
-i.fa.fa-image{
-  z-index: 3;
-  position: absolute;
-  right: 190px;
-  bottom: 35px;
-}
+

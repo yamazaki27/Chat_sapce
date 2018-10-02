@@ -45,9 +45,6 @@
   &-list {
     padding-top: 20px;
     @include star;
-    .chat-side__group {
-      margin-bottom: 40px;
-    }
   }
 }
 .group__name {
@@ -58,4 +55,5 @@
 .group__message {
     color: $white;
     font-size: 11px;
+    margin-bottom: 40px;
 }
