@@ -41,6 +41,7 @@
   .chat-main__body {
     height: calc(100vh - 15% - 90px);
     background-color: #AAAAAA;
+    overflow: scroll;
     &--messages-list {
       padding-left: 40px;
       padding-top: 46px;
