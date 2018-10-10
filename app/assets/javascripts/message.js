@@ -56,21 +56,21 @@ $(function(){
   if (window.location.href.match(/\/groups\/\d+\/messages/)) {
     var message_id = $('.chat-main__body--messages-list:last').data('message-id');
     $.ajax({
-      url: window.location.href,
-      type: 'GET',
-      data: {id: message_id},
-      dataType: 'json',
-      processData: false,
-      contentType: false
+    url: window.location.href,
+    type: 'GET',
+    data: {id: message_id},
+    dataType: 'json',
+    processData: false,
+    contentType: false
     })
     .done(function(json) {
-      var insertHTML = '';
-      json.forEach(function(message) {
-        if (message.id > message_id) {
-          insertHTML += buildHTML(message);
-          $('.chat-main__body').append(insertHTML);
-        }
-      });
+    var insertHTML = '';
+    json.forEach(function(message) {
+      if (message.id > message_id) {
+        insertHTML += buildHTML(message);
+        $('.chat-main__body').append(insertHTML);
+      }
+    });
     })
     .fail(function(data) {
       alert('自動更新に失敗しました');
