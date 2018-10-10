@@ -5,6 +5,5 @@ class CreateGroups < ActiveRecord::Migration[5.0]
       t.string :name, null: false, index: true, unique: true
       t.timestamps
     end
-
   end
 end
