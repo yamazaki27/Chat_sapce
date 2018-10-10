@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_group
 
+#comment
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
