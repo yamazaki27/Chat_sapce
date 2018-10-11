@@ -54,7 +54,6 @@ $(function(){
 
   var interval = setInterval(function() {
   var message_id = $('.chat-main__body--messages-list:last').data('message-id');
-  console.log(message_id)
   if (window.location.href.match(/\/groups\/\d+\/messages/)) {
     $.ajax({
       url: window.location.href,
@@ -70,7 +69,7 @@ $(function(){
         if (message.id > message_id) {
           insertHTML += buildHTML(message);
           $('.chat-main__body').append(insertHTML);
-          $('.chat-main__body').animate({scrollTop: 99999}, 500, 'swing')
+          $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 500, 'swing')
         }
       });
 
