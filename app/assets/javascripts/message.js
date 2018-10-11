@@ -40,9 +40,8 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $(".chat-main__body").append(html);
-      $(".form__message").val("");
-      $(".form__mask__image").val("");
-      $('.chat-main__body').animate({scrollTop: 99999}, 500, 'swing')
+      $("#new_message")[0].reset();
+      $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 1000, 'swing')
     })
     .fail(function() {
       alert("error!");
@@ -64,15 +63,14 @@ $(function(){
       contentType: false
     })
     .done(function(json) {
-      var insertHTML = '';
       json.forEach(function(message) {
         if (message.id > last_message_id) {
-          insertHTML += buildHTML(message);
+          var insertHTML = buildHTML(message);
           $('.chat-main__body').append(insertHTML);
-          $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 500, 'swing')
+          $("#new_message")[0].reset();
+          $('.chat-main__body').animate({scrollTop: $('.chat-main__body')[0].scrollHeight}, 1000, 'swing')
         }
       });
-
     })
     .fail(function(data) {
       alert('自動更新に失敗しました');
