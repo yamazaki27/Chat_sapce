@@ -1,3 +1,4 @@
+json.id @message.id
 json.text @message.text
 json.image_url @message.image.url
 json.user_name @message.user.name
