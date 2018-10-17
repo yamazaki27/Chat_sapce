@@ -9,6 +9,7 @@ $(function(){
     search_result.append(html)
   }
 
+
   function appendGroup(user) {
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                   <input name='group[user_ids][]' type='hidden' value='${user.id}'>
@@ -20,23 +21,25 @@ $(function(){
 
   $('#user-search-field').on('keyup', function(){
     var input = $(this).val();
-    $.ajax({
+    if (input.length !== 0 ) {
+      $.ajax({
       type: 'GET',
       url: '/users',
       data:{ keyword: input },
       datatype: "json"
-    })
-    .done(function(users) {
-      $("#user-search-result").empty();
-      if (users.length !== 0) {
-        users.forEach(function(user){
-          appendUser(user);
-        });
-      }
-    })
-    .fail(function() {
-      alert('ユーザー検索に失敗しました');
-    })
+      })
+      .done(function(users) {
+        $("#user-search-result").empty();
+        if (users.length !== 0) {
+          users.forEach(function(user){
+            appendUser(user);
+          });
+        }
+      })
+      .fail(function() {
+        alert('ユーザー検索に失敗しました');
+      })
+    }
   });
   $('#user-search-result').on('click', ".chat-group-user__btn", function(){
     var selectUser = {
